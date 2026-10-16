@@ -1,0 +1,6 @@
+{
+  "name": "wayline-warehouse-desktop",
+  "version": "1.7.0",
+  "private": true,
+  "main": "main.cjs"
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;" />
+  <title>Lumina</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><img class="brand-logo" src="build/logo-mark.png" alt="Lumina logo" /><div><strong>Lumina</strong><span>Warehouse 01</span></div></div>
+      <nav aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon" data-icon="dashboard"></span>Dashboard</button>
+        <button class="nav-item" data-view="inventory"><span class="nav-icon" data-icon="inventory"></span>Inventory</button>
+        <button class="nav-item" data-view="orders"><span class="nav-icon" data-icon="orders"></span>Orders <b id="ready-badge">0</b></button>
+        <button class="nav-item" data-view="picking"><span class="nav-icon" data-icon="picking"></span>Picking</button>
+        <button class="nav-item" data-view="history"><span class="nav-icon" data-icon="history"></span>History</button>
+      </nav>
+      <div class="picker-card"><strong>3 pickers active</strong><span>Work is balanced automatically across Picker 1–3.</span></div>
+      <button class="reset-demo" id="reset-demo" type="button"><span data-icon="history"></span>Reset demo data</button>
+    </aside>
+    <main id="app" tabindex="-1"></main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="renderer.js"></script>
+</body>
+</html>

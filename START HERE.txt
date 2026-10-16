@@ -1,0 +1,36 @@
+LUMINA (version 1.7)
+Warehouse management demo (formerly "Wayline Warehouse")
+
+Double-click "Lumina.exe" to open the application. It needs no installation.
+
+RUNNING THE DEMO
+- Orders: "Add sample orders" or "New order". Pending orders can be edited, cancelled or deleted from the ... menu;
+  click an order number for its details and timeline.
+- "Create automatic batches" groups ready orders onto picking carts:
+    * Hazardous and Refrigerated/Frozen items get their own carts.
+    * A cart carries up to 4 orders and 60 load units (Oversized items count 5 each).
+    * Batches go to the picker with the least work. You can reassign the picker, remove an order or cancel a batch.
+- Picking: the route starts and ends at S. Fragile items are picked last. Follow "Next stop" and click
+  "Mark picked", or "Short Pick" if fewer units were on the shelf. "Complete Batch" updates stock: short-picked
+  locations are corrected, and orders that can't be filled go back to Pending.
+- Packing: picked orders show "Pack", then "Ship". Shipped orders count as Completed.
+- Inventory: On hand, Reserved (for open batches) and Available. Use the ... menu to Receive Stock, manage
+  Locations & Transfers (a product can be kept in several squares), and see Stock History.
+  Each square holds one product: racks hold 500 units, shelves 250, bins 100. Product names must be unique.
+- Warehouse layout: place a Door in each zone (on the edge facing the corridor) to control where pickers
+  enter. If no door is placed, Lumina picks one automatically.
+- Picking routes are planned by Lumina's Java route engine (see "Lumina Java Engine (source)").
+- Dashboard: click any number tile, status line or notification to jump to the matching orders or products.
+- To start over, click "Reset demo data" at the bottom of the left sidebar.
+
+WHERE YOUR DATA IS KEPT
+The app saves its data for your Windows user on this PC, in:
+  %APPDATA%\Wayline Warehouse
+(The folder keeps its original name so data from earlier versions carries over; it is upgraded automatically.)
+Copying or moving this folder copies the program only, not the data.
+
+IMPORTING PRODUCTS
+1. Open "Lumina Inventory Import Template.xlsx" (or use the Template button on the Inventory page).
+2. Fill in one product per row. Zone, Grid Column and Grid Row must point to a free Rack, Shelf or Bin.
+3. Save the sheet as a CSV file ("CSV UTF-8" is best; plain CSV also works).
+4. In the app, open Inventory and choose Import CSV. Rows that can't be imported are listed with the reason.
